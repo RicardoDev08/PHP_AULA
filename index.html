@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendendo Formulário</title>
+</head>
+<body>
+    <form metrhod='GET'action="action.php">
+    <fildeset id='pessoal'>
+        <legend>dados pessoais</legend>
+        <p>Nome <input type="text" name='nome'id='nome'size='20'maxlenght='20'placeholder='EX:João'></p>
+    </fildeset>
+    <input type="submit"value="Enviar">
+        <B>Qual seu sistema operacional</B><br>
+        <input type="radio" name =sistema value="Windows98">Win98 <br>
+        <input type="radio" name=sistema value="windows XP">Win XP <br>
+        <input type="radio" name=sistema value="Outros"checked>Outros <br>
+        <input type="submit">
+        
+        <b>Qual o melhor professor?</b><br>
+        <input type="checkbox"id="ederson"name="prof[]" value="Ederson"checked/>
+        <label for="ederson">Ederson</label>
+        <input type="checkbox"id="horns"name="prof[]"value="Ederson da Costa"/>
+        <label for="Ederson Costa">Ederson Costa</label>
+        <input type="submit">
+
+    </form>
+</body>
+</html>

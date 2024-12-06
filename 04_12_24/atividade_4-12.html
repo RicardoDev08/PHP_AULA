@@ -1,0 +1,61 @@
+<!-- –Faça um formulário que contenha os seguintes dados:
+Text = (nome, Rg, CPF, Endereço)
+Number = (idade)
+Date = (data)
+Checkbox = (preferência época do ano)
+Radio = (sexo)
+Color = (cor)
+...Mais 5 perguntas... -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1><b>Formulário com PHP<b></h1>
+    <form metrhod ='GET' action="atividade_4-12.php">
+    <fieldset id="pessoal">
+        <legend><b>Dados Pessoais<b></legend>
+        <p><b>Nome Completo: </b><input type="text" name="nome" id="nome" size="40 maxlenght="50 placeholder="EX: Ricardo Sousa"></p><br>
+        <p><b>RG: </b><input type="text" name="rg" id="RG" size="20" maxlength="20" placeholder="EX:0000000"></p><br>    
+        <p><b>CPF: </b><input type="text" name="cpf" id="cpf" size="20" maxlength="20" placeholder="EX:00000000000"></p><br>
+        <p><b>Endereço: </b><input type="text" name="endereco" id="endereco" size="50" maxlength="50" placeholder="R.Emile zolá Nº01"></p><br>
+
+        <p><b>Idade</b></p><input type="number" name="idade" id="idade" size="20" maxlength="3" placeholder="EX:20"><br>
+        <p><b>Data de Nascimento: </b></p><input type="date" name="data" id="data" ><br><br>
+         
+        <b>Qual o seu sexo: </b><br>
+        <input type="radio" name =sexo value="Masculino">Masculino <br>
+        <input type="radio" name=sexo value="Feminino">Feminino<br>
+        <input type="radio" name=sexo value="Outros"checked>Outros <br><br>
+
+            
+        <label for="cor">Escolha uma cor:</label><br>
+        <input type="color" id="cor" name="cor"><br><br>
+
+        <b>Qual o melhor professor?</b><br>
+        <input type="checkbox"id="ederson"name="prof" value="Ederson"checked/>
+        <label for="ederson">Ederson</label>
+        <input type="checkbox"id="horns"name="prof"value="Ederson da Costa"/>
+        <label for="Ederson Costa">Ederson Costa</label><br><br>
+        <form method="post">
+            <button type="submit">Enviar</button>
+        </form>    
+        
+
+        <B>Qual seu sistema operacional</B><br>
+        <input type="radio" name =sistema value="Windows98">Win98 <br>
+        <input type="radio" name=sistema value="windows XP">Win XP <br>
+        <input type="radio" name=sistema value="Outros"checked>Outros <br><br>
+        <input type="submit"><br>
+    
+    </fieldset>   
+
+    </form>   
+</body>
+</html>
