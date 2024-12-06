@@ -20,15 +20,22 @@ $query="select * from user where nome ='{$nome}'and senha = '{$senha}'";
 $result=mysqli_query($con,$query);
 $row=mysqli_num_rows($result);
 
-if($row>0)(
+if($row>0){
     $_session["nome"]=$nome;
     heade("location;admin.php");
-    exit();
-)
-if(show>0)(
-    $_SESSION["nome"]=$nome;
-    $_SESSION["setor"]=$retorno['setor'];
-    exit();
-)
+
+    if(show>0){
+        $_SESSION["nome"]=$nome;
+        $_SESSION["setor"]=$retorno['setor'];
+        exit();
+    if($_SESSION['setor']=='admin'){
+        header("location:admin.php"); 
+        exit()}    
+        else if($_SESSION["setor"]=="user"){
+            header("location:usuario.php");
+        }
+        exit();
+}
+}
 
 ?>
