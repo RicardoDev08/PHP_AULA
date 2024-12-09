@@ -9,13 +9,19 @@
     <?php
     session_start();
     include("vericacao.php");
+    
     if($_SESSION['setor']!='admin'){
         header("location:index.php")
     exit();    
     }
+    if ($_SESSION['setor']!='admin'){
+        header("location:login.php");
+        exit();
+    }
     ?>
     PÁGINA ADMIN
     <a href="logout.php">Sair</a>
+
 
   
 </body>
